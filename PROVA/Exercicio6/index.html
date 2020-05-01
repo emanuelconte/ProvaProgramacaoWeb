@@ -1,0 +1,23 @@
+<script>
+
+    var A = ['6', '5', '9', '2', '7'];
+    var K = 3;
+
+    function exercicio(A, K) {
+        for (var cont1 = 0; cont1 < K; cont1++) {
+            var cont2 = 0;
+            var ultimo = A[4]; //7
+            var posicao = A[0]; //6
+            while (cont2 < (A.length -1)) {
+                var proxPosicao = A[cont2 + 1]; //5
+                A[cont2 + 1] = posicao;
+                posicao = proxPosicao;
+                cont2++;
+            }
+            A[0] = ultimo;
+        }
+        console.log(A);
+    }
+
+    exercicio(A, K);
+</script>
